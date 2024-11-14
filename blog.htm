@@ -1,0 +1,244 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Blog</title>
+<link rel="icon" type="image/ico" href="favicon.ico" />
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image: url(img/background.gif);
+}
+
+/* ~~ Селекторы элементов/тегов ~~ */
+ul, ol, dl { /* Из-за различий между браузерами рекомендуется обнулять поля в списках. Для согласованности можно указать нужные величины либо здесь, либо в элементах списка (LI, DT, DD), которые они содержат. Помните, что сделанное здесь последовательно включается в список .nav, если только не будет прописан более конкретный селектор. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* удаление верхнего поля позволяет обойти проблему выхода полей за границы содержащего их контейнера DIV. Оставшееся нижнее поле отделит его от любых последующих элементов. */
+	padding-right: 15px;
+	padding-left: 15px; /* добавление боковых полей к элементам внутри контейнеров DIV, а не к самим контейнерам избавляет от необходимости расчетов рамочной модели. В качестве альтернативы можно использовать вложенный контейнер DIV с боковыми полями. */
+}
+a img { /* этот селектор убирает стандартную синюю рамку, которая появляется у изображений в некоторых браузерах, если вокруг изображения есть ссылка */
+	border: none;
+}
+
+/* ~~ Оформление ссылок на вашем сайте должно оставаться в этом порядке, включая группу селекторов, создающих эффект наведения. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* если только ссылки не должны выглядеть исключительно своеобразно, то для быстрого зрительного распознавания рекомендуется использовать подчеркивание */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* эта группа селекторов обеспечивает пользователю, работающему с клавиатурой, такие же возможности наведения, как и при использовании мыши. */
+	text-decoration: none;
+}
+
+/* ~~ этот контейнер окружает все остальные контейнеры DIV, задавая их ширину на процентной основе ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* желательно задать максимальную ширину, чтобы макет не стал слишком широким на большом экране. Это повышает удобство чтения строк. В IE6 это объявление не соблюдается. */
+	min-width: 780px;/* желательно задать минимальную ширину, чтобы макет не стал слишком узким. Это повышает удобство чтения строк в боковых столбцах. В IE6 это объявление не соблюдается. */
+	background-color: #000000;
+	margin: 0 auto; /* автоматическое задание величин по бокам в совокупности с шириной центрирует макет. Это необязательно, если ширина контейнера составляет 100 %. */
+}
+
+/* ~~ верхнему колонтитулу не задана ширина. Он растянется на всю ширину макета. Он содержит заполнитель для изображения, который должен быть заменен логотипом по ссылке ~~ */
+.header {
+	background-color: #000000;
+}
+
+/* ~~ Столбцы для макета. ~~ 
+
+1) Поля размещены только вверху и/или внизу DIV. Элементы в этих DIV имеют боковые поля. Это избавляет пользователя от необходимости расчетов рамочной модели. Помните, что при добавлении боковых полей или границы к самому DIV их ширина будет добавлена к задаваемой ширине, что образует "полную" ширину. Кроме того, можно удалить поля элемента в DIV и поместить внутри него второй DIV без ширины и с необходимыми по проекту полями.
+
+2) Столбцы не снабжаются полями, поскольку все они обтекающие. Если нужно добавить поля, то  желательно не с той стороны, с которой обтекается столбец (например, правое поле у div, настроенного на обтекание справа).  Часто вместо этого можно применить padding. В случаях, когда это правило приходится нарушить, следует добавить к правилу div объявление "display:inline", чтобы исправить ошибку с удвоением полей в некоторых версиях Internet Explorer. 
+
+3) Поскольку классы можно использовать в документе многократно (а к элементу можно применять несколько классов), то столбцам вместо идентификаторов назначены имена классов. Например, два DIV с боковыми панелями могут при необходимости стыковаться. По желанию имена можно легко заменить на идентификаторы при условии, что они используются по одному на документ.
+
+4) Если вы предпочитаете, чтобы панель навигации была справа, а не слева, просто установите обтекание столбцов в противоположном направлении (все справа, а не слева), они выстроятся в обратном порядке. Перемещать DIV в исходном коде HTML-документа не нужно.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 30%;
+	background-color: #000000;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 50%;
+	float: left;
+}
+.sidebar2 {
+	float: left;
+	width: 20%;
+	background-color: #000000;
+	padding: 10px 0;
+}
+
+/* ~~ Этот сгруппированный селектор выдает списки в пространстве .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* это поле зеркально повторяет правое поле в правиле для заголовков и параграфов выше. Внизу поле помещено как граница между элементами списков, а слева — как отступ. Поля можно настраивать по желанию. */
+}
+
+/* ~~ Стили списка навигации (можно убрать, если решено использовать готовое подменю, например Spry) ~~ */
+ul.nav {
+	list-style: none; /* удаляет маркер списка */
+	border-top: 1px solid #666; /* создает верхнюю границу ссылок — все остальные размещаются с использованием нижней границы в LI */
+	margin-bottom: 15px; /* создает пространство между навигацией по содержимому ниже */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* разделяет кнопки */
+}
+ul.nav a, ul.nav a:visited { /* группировка этих селекторов гарантирует, что ссылки будут выглядеть как кнопки даже после того, как пользователь перейдет по ним */
+	padding: 5px 5px 5px 15px;
+	display: block; /* наделяет ссылку свойствами блока, из-за чего она заполняет весь содержащий ее элемент LI. При этом вся область реагирует на щелчок мышью. */
+	text-decoration: none;
+	background-color: #000000;
+	color: #fff;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* изменяет цвет текста и фона при навигации с помощью клавиатуры и мыши */
+	background-color: #000000;
+	color: #FFF;
+}
+
+/* ~~ Нижний колонтитул ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #000000;
+	position: relative;/* IE6 получает hasLayout для правильной очистки */
+	clear: both; /* это свойство очистки заставляет .container видеть место окончания столбцов и включать их */
+	text-align: center;
+}
+
+/* ~~прочие классы float/clear~~ */
+.fltrt {  /* этот класс можно использовать для обтекания элемента справа на странице. Обтекаемый элемент должен предшествовать элементу, с которым он должен находиться рядом на странице. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* этот класс можно использовать для обтекания элемента слева на странице. Обтекаемый элемент должен предшествовать элементу, с которым он должен находиться рядом на странице. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* этот класс можно поместить в теге <br /> или в пустом блоке DIV в качестве конечного элемента, следующего за последним обтекаемым DIV (внутри #container), если .#footer удален или извлечен из #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+body,td,th {
+	color: #fff;
+}
+.container .footer p {
+	text-align: left;
+	color: #FFFFFF;
+}
+-->
+</style><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* это отрицательное поле в 1 пиксел можно поместить в любом столбце данного макета с таким же корректирующим эффектом. */
+ul.nav a { zoom: 1; }  /* свойство масштабирования предоставляет IE триггер hasLayout, необходимый для удаления лишнего пустого пространства между ссылками */
+</style>
+<![endif]-->
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+
+<body background="img/background.gif">
+
+<div class="container">
+  <div class="header">
+    <p><a href="#"><img src="img/Home Video Bold 700.png" alt="Место для логотипа" name="Insert_logo" width="636" height="89" id="Insert_logo" style="background-color: #8090AB; display:block;" /></a></p>
+    <p>&nbsp;</p> 
+  <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="https://vovakubarik.com/">▌BACK</a></li>
+    </ul>
+    <audio autoplay="autoplay" controls="controls" loop="loop"><br />
+<source src="Girl From Petaluma.ogg" type="audio/ogg"  />
+<source src="Girl From Petaluma.mp3" type="audio/mp3"  />
+<source src="Girl From Petaluma.wav" type="audio/wav"  />
+</audio>
+  <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>&nbsp;</h1>
+    <!-- end .content --></div>
+  <div class="sidebar2">
+    <h4><a href="#"><img src="img/96d229d8c1be97c0d8c297b16a65ae0d.gif" width="160" height="120" /></a></h4>
+    <!-- end .sidebar2 --></div>
+  <div class="footer">
+    <blockquote>
+      <p>@vovakubarik Четверг, Август 8, 2024  19:31</p>
+      <p><img src="blog/Original5.gif" width="512" height="512" /></p>
+      <p>I AM A 99 LVL MAGICIAN NAMED LUDOLPH<br />
+      </p>
+      <div>
+        <div></div>
+      </div>
+      <p>@vovakubarik Среда, Август 7, 2024  23:19</p>
+      <p><img src="blog/Original4.png" width="923" height="621" /></p>
+      <p>Преобрел подписку на 2 месяца в World Of Warcraft. БЛИЖАЙШИЕ 2 МЕСЯЦА МОЖЕТЕ МЕНЯ НЕ ЖДАТЬ!!!</p>
+      <p>@vovakubarik Воскресенье, Август 4, 2024  23:48</p>
+      <p><img src="blog/FOriginal3.jpg" width="405" height="540" /></p>
+      <p>Это было слишком даже для меня. . </p>
+      <p>@vovakubarik Пятница, Август 2, 2024  15:09</p>
+      <p>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="720" height="540" id="FLVPlayer">
+          <param name="movie" value="FLVPlayer_Progressive.swf" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <param name="scale" value="noscale" />
+          <param name="salign" value="lt" />
+          <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=blog/00004&amp;autoPlay=true&amp;autoRewind=false" />
+          <param name="swfversion" value="8,0,0,0" />
+          <!-- Этот тег param предлагает пользователям Flash Player 6.0 r65 и более поздних версий загрузить последнюю версию Flash Player. Удалите его, если не хотите, чтобы пользователи видели запрос. -->
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <!-- Следующий тег object не поддерживается браузером Internet Explorer. Поэтому скройте его от Internet Explorer при помощи IECC. -->
+          <!--[if !IE]>-->
+          <object type="application/x-shockwave-flash" data="FLVPlayer_Progressive.swf" width="720" height="540">
+            <!--<![endif]-->
+            <param name="quality" value="high" />
+            <param name="wmode" value="opaque" />
+            <param name="scale" value="noscale" />
+            <param name="salign" value="lt" />
+            <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=blog/00004&amp;autoPlay=true&amp;autoRewind=false" />
+            <param name="swfversion" value="8,0,0,0" />
+            <param name="expressinstall" value="Scripts/expressInstall.swf" />
+            <!-- Браузер отображает следующее альтернативное содержимое для пользователей Flash Player 6.0 и более старых версий. -->
+            <div>
+              <h4>Для содержимого этой страницы требуется более новая версия Adobe Flash Player.</h4>
+              <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Получить проигрыватель Adobe Flash Player" /></a></p>
+            </div>
+            <!--[if !IE]>-->
+          </object>
+          <!--<![endif]-->
+        </object>
+      </p>
+      <p>@vovakubarik Пятница, Август 2, 2024  15:05</p>
+      <p><img src="blog/FOriginal2.jpg" width="207" height="259" /></p>
+      <p>30 Июля  День Рождения моего сайта</p>
+      <p>@vovakubarik Четверг, Август 1, 2024  2:51</p>
+      <p><img src="blog/FOriginal1.jpg" width="640" height="480" /></p>
+      <p>Привет, это я </p>
+    </blockquote>
+  <!-- end .footer --></div>
+<!-- end .container --></div>
+<script type="text/javascript">
+swfobject.registerObject("FLVPlayer");
+</script>
+</body>
+</html>
